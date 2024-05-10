@@ -1,7 +1,7 @@
 # SSMMP: Simple Service Mesh Management Protocol 
   <img src="/ssmmp-pictures.pptx.svg" />
+
 # A short introduction to SSMMP
-<br>
 A simple protocol for Service Mesh management is proposed. 
 The protocol specification consists of the formats of messages, and the actions taken by senders and recipients.
 <br>
