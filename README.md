@@ -66,6 +66,7 @@ These decisions (mutually interrelated) are forwarded to appropriate agents as t
 
 # The abstractions
 SSMMP is based on the two abstraction: 
+<br>
 •	abstract definition of service of CNApp,
 •	and abstract graph of CNApp. 
 <br>
@@ -95,10 +96,11 @@ Abstract outputs of a microservice are defined as a collection of the clients (o
 <br>
 Components of abstract input are called abstract sockets, whereas components of abstract output are called abstract plugs. 
 An abstract plug (of one microservice) can be associated to an abstract socket (of another microservice) if they are two complementary parties of the same communication protocol. 
+
+### Simple example of an abstract CNApp
 <p align="center">
   <img src="/ssmmp-abstraction.pptx.svg" />
 </p>
-### Simple example of an abstract CNApp
 The above directed acyclic graph represents a workflow of microservices that comprise a simple CNApp. 
 The edges of the graph are of the form (abstract plug -> abstract socket). 
 They are directed, which means that a client (of a protocol) can initiate a communication session with a server of the same protocol.
