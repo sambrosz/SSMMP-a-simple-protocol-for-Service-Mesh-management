@@ -1,7 +1,7 @@
 # SSMMP: Simple Service Mesh Management Protocol 
 
 <p align="center">
-  <img src="https://github.com/sambrosz/SSMMP-a-simple-protocol-for-Service-Mesh-management/blob/main/readmeImg/ssmmp-pictures.pptx.svg" />
+  <img src="https://github.com/sambrosz/SSMMP-a-simple-protocol-for-Service-Mesh-management/main/ssmmp-pictures.pptx.svg" />
 </p>
 https://github.com/sambrosz/SSMMP-a-simple-protocol-for-Service-Mesh-management/edit/main/README.md
  
