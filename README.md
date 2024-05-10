@@ -40,13 +40,11 @@ Current state of the control as well as its history are stored in a dedicated da
 <br>
 The Knowledge-base of Manager consists of abstract graphs of CNApps, i.e. the CNApps that can be deployed on the cluster comprising all the nodes. 
 <br>
-<br>
 The current state of any running instance of service is stored in Manager's database, and consists of:
 <br>
 •	open communication sessions and their load metrics; 
 <br>
 •	observable (healthy, performance and security) metrics, logs and traces.
-<br>
 <br>
 The key element of SSMMP is the concept of communication session understood jointly as establishing a connection and then starting a protocol session on this connection.
 The process of establishing and closing such sessions is controlled by the Manager through its agents. 
@@ -73,14 +71,12 @@ SSMMP is based on the two abstraction:
 CNApp is a network application where microservices communicate with each other by exchanging messages (following CNApp's business logic) using dedicated, specific protocols implemented on top of the network protocol stack.  Usually, it is TCP/UDP/IP.
 Each of these protocols is based on the client-server model of communication. 
 <br>
-<br>
 The server (as part of a running microservice on a host with a network address) is listening on a fixed port for a client that is a part of another microservice, usually, running on a different host. 
 <br>
 Since a client initiates a communication session with the server, this client must know the address and port number of the server. 
 <br>
 A single microservice can implement and participate in many different protocols, acting as a client and/or as a server.
 Thus, a microservice can be roughly defined as a collection of servers and clients of the protocols it participates in, and its own internal functionality (business logic). 
-<br>
 <br>
 Communication protocols (at application layer) are defined as more or less formal specifications independently of their implementation. 
 <br>
@@ -127,7 +123,6 @@ The above Figure illustrates a CNApp composed of one API Gateway, five stateless
 <br>
 The edges denote abstract connections and can also be seen as abstract compositions of services within a workflow. 
 <br>
-<br>
 Abstract graph of CNApp is defined as a directed labeled multi-graph 
 <br>
 G := (V, E)
@@ -143,12 +138,10 @@ Edges E is a collection of labeled edges of the graph. Each edge is of the form:
 where C and D belong to V and (P,S) denotes a protocol. 
 That is, P belongs to OUT of C, and S belongs to IN of D. The edges correspond to abstract connections between microservices.
 <br>
-<br>
 The direction of an edge in the graph represents the client-server order of establishing a concrete connection. 
 <br>
 An implementation of abstract connection (C, (P,S), D) in a running CNApp results in a concrete plug (in an instance of service C) corresponding to this abstract plug P. The concrete plug is connected to a concrete socket (corresponding to abstract socket S) of an instance of service D. 
 This connection is called a communication session. 
-<br>
 <br>
 Initial vertices of the abstract graph correspond to API Gateways (entry points for users), whereas the terminal vertices correspond to backend storage services (BaaS) where all data and files of the CNApp are stored. 
 <br>
@@ -156,14 +149,12 @@ The vertices representing regular microservices are between the API Gateways and
 Scaling through replication and reduction (closing replicas) of a service forces it to be stateless. 
 API Gateways and regular microservices are stateless and can be replicated, i.e. multiple instances of such a service can run simultaneously. 
 <br>
-<br>
 To run CNApp, instances of its services must first be executed, then abstract connections can be configured and established as real connections, and finally protocol sessions (corresponding to these connections) can be started. 
 Some services and/or connections may not be used by some executions of CNApp. Temporary protocol sessions can be started for already established connections (and then closed along with their connections) dynamically at runtime. 
 Multiple service instances may be running, and some are shutting down.
 This requires dynamic configurations of network addresses and port numbers for plugs and sockets of the instances. 
 <br>
 The novelty of SSMMP lies in the smart use of these configurations. A similar idea has been used by Netflix at the software level, but has not been fully explored.
-<br>
 <br>
 The formal specification of SSMMP is <a href="/SSMMPv2_1_specification.pdf"> here </a> (HYPERLINK). 
 The complete description of SSMMP is at <a href="https://arxiv.org/abs/2305.16329"> arXive </a>, and as a slide presentation is <a href="/SSMMP_ang.pdf"> here </a>. 
@@ -176,7 +167,6 @@ The abstract definition of service of CNApp is also important here.
 Separation of these abstract notions from deployment is important. 
 <br>
 The novelty of SSMMP consists in the dynamic establishment and closing of communication sessions at runtime based on the configurations assigned to sockets and plugs by the Manager.
-<br>
 <br>
 Although a similar approach has already been used in <a href="https://netflixtechblog.com/zero-configuration-service-mesh-with-on-demand-cluster-discovery-ac6483b52a51?gi=1a42415024ae"> Netflix </a>   (as dedicated software), it can be fully exploited in Netflix by extending the network protocol stack with SSMMP. 
 <br>
