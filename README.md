@@ -62,8 +62,9 @@ These decisions (mutually interrelated) are forwarded to appropriate agents as t
 
 # The abstractions
 SSMMP is based on the two abstraction: 
-
+<br>
 •	abstract definition of service of CNApp,
+<br>
 •	and abstract graph of CNApp. 
 <br>
 CNApp is a network application where microservices communicate with each other by exchanging messages (following CNApp's business logic) using dedicated, specific protocols implemented on top of the network protocol stack.  Usually, it is TCP/UDP/IP.
