@@ -196,7 +196,7 @@ Microservices cannot communicate directly with users; only via the API Gateway.
 API Gateway and microservices are stateless.  
 Requests and responses are objects of class String. 
 
-# Implementations of SSMMP tested on the above test CNApp 
+# Implementations of SSMMP tested on the above CNApp 
 
  <a href="/ssmmpComAPIv1.1.pdf"> SSMMP/1.1 communication APIs: the code and its detailed explanation </a> to dowload 
 
