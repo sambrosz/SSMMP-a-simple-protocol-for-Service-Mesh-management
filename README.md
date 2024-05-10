@@ -50,7 +50,6 @@ The key element of SSMMP is the concept of communication session understood join
 The process of establishing and closing such sessions is controlled by the Manager through its agents. 
 <br>
 Current states of the running service instances are the basis for decisions made by Manager:  
-<br>
 •	execution and shutdown of service instances, 
 <br>
 •	load balancing by multiple instance executions of stateless services, and closing some of them, 
