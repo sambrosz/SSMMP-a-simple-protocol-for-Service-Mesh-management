@@ -92,29 +92,22 @@ Protocol is denoted (P,S) as two closely related parties to the conversation: th
 After implementation, they are integral parts (modules) of microservices that communicate using this protocol.
 <br>
 Abstract inputs of a microservice can be defined as a collection of the servers (of the protocols) it implements: 
-<br>
  IN := (S1, S2, ... , Sk)
 <br>
 Abstract outputs of a microservice are defined as a collection of the clients (of the protocols) it implements:  
-<br>
  OUT := (P1, P2, ... , Pn) 
 <br>
 Components of abstract input are called abstract sockets, whereas components of abstract output are called abstract plugs. 
 An abstract plug (of one microservice) can be associated to an abstract socket (of another microservice) if they are two complementary parties of the same communication protocol. 
-
-
 <p align="center">
   <img src="/ssmmp-abstraction.pptx.svg" />
 </p>
 ### Simple example of an abstract CNApp
-
 The above directed acyclic graph represents a workflow of microservices that comprise a simple CNApp. 
 The edges of the graph are of the form (abstract plug -> abstract socket). 
 They are directed, which means that a client (of a protocol) can initiate a communication session with a server of the same protocol.
 <br>
-<br>
 Microservice  is defined as 
-<br>
 A := (IN, F, OUT)
 <br>
 where IN is the abstract inputs of the microservice, OUT is the abstract outputs, and F  denotes the business logic of the microservice.
