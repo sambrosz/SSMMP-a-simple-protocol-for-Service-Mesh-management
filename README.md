@@ -182,7 +182,7 @@ The supervising manager can also serve as a distributed control plane where ther
 Netflix uses over 1000 microservices now. Uber now has 4000 or more independent microservices. A distributed control plane seems to be necessary for such huge CNApps. 
 <br>
 SSMMP was designed to be independent of transport and network protocol stack. TCP/IP is the default stack for communication sessions. Named Data Networking can be seen as an alternative. 
-# A simple test CNApp for the SSMMP protocol
+# A simple CNApp for testing the SSMMP protocol
 
 <p align="center">
   <img src="/ssmmp-simpleCNApp.pptx.svg" />
