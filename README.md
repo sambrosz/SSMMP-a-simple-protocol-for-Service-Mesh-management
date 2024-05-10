@@ -86,8 +86,7 @@ After implementation, they are integral parts (modules) of microservices that co
 Abstract inputs of a microservice can be defined as a collection of the servers (of the protocols) it implements: 
  IN := (S1, S2, ... , Sk)
 <br>
-Abstract outputs of a microservice are defined as a collection of the clients (of the protocols) it implements:  
- OUT := (P1, P2, ... , Pn) 
+Abstract outputs of a microservice are defined as a collection of the clients (of the protocols) it implements:  OUT := (P1, P2, ... , Pn) 
 <br>
 Components of abstract input are called abstract sockets, whereas components of abstract output are called abstract plugs. 
 An abstract plug (of one microservice) can be associated to an abstract socket (of another microservice) if they are two complementary parties of the same communication protocol. 
