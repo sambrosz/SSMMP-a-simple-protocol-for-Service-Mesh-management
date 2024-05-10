@@ -3,7 +3,6 @@
 <p align="center">
   <img src="/ssmmp-pictures.pptx.svg" />
 </p>
-https://github.com/sambrosz/SSMMP-a-simple-protocol-for-Service-Mesh-management/edit/main/README.md
  
 # A short introduction to SSMMP
 <br>
@@ -105,7 +104,7 @@ An abstract plug (of one microservice) can be associated to an abstract socket (
 
 
 <p align="center">
-  <img src="https://github.com/DawidBorkowskiUWS/SSMMP-a-simple-protocol-for-Service-Mesh-management/blob/main/readmeImg/ssmmp-abstraction.pptx.svg" />
+  <img src="/ssmmp-abstraction.pptx.svg" />
 </p>
 ### Simple example of an abstract CNApp
 
@@ -175,27 +174,23 @@ This requires dynamic configurations of network addresses and port numbers for p
 The novelty of SSMMP lies in the smart use of these configurations. A similar idea has been used by Netflix at the software level, but has not been fully explored.
 <br>
 <br>
-The formal specification of SSMMP is <a href="https://github.com/DawidBorkowskiUWS/SSMMP-a-simple-protocol-for-Service-Mesh-management/blob/main/SSMMPv2_1_specification.pdf"> here </a> (HYPERLINK). 
-The complete description of SSMMP is at <a href="https://arxiv.org/abs/2305.16329"> arXive </a>, and as a slide presentation is <a href="https://github.com/DawidBorkowskiUWS/SSMMP-a-simple-protocol-for-Service-Mesh-management/blob/main/SSMMP_ang.pdf"> here </a>. 
+The formal specification of SSMMP is <a href="/SSMMPv2_1_specification.pdf"> here </a> (HYPERLINK). 
+The complete description of SSMMP is at <a href="https://arxiv.org/abs/2305.16329"> arXive </a>, and as a slide presentation is <a href="/SSMMP_ang.pdf"> here </a>. 
 
 # Summary of the short intro to SSMMP
 SSMMP is simple if we consider its description presented above, and especially the complete formal specification. 
 <br>
-<br>
 The concept of abstract connection between services (in the abstract graph of CNApp) and its implementation as communication sessions is crucial. 
 The abstract definition of service of CNApp is also important here. 
 Separation of these abstract notions from deployment is important. 
-<br>
 <br>
 The novelty of SSMMP consists in the dynamic establishment and closing of communication sessions at runtime based on the configurations assigned to sockets and plugs by the Manager.
 <br>
 <br>
 Although a similar approach has already been used in <a href="https://netflixtechblog.com/zero-configuration-service-mesh-with-on-demand-cluster-discovery-ac6483b52a51?gi=1a42415024ae"> Netflix </a>   (as dedicated software), it can be fully exploited in Netflix by extending the network protocol stack with SSMMP. 
 <br>
-<br>
 Since executing, scaling and reconfiguration of CNApp can be done by SSMMP, it seems reasonable to include SSMMP as an integral part of CNApp. 
 Then, also CNApp crash recovery can be performed via SSMMP.
-<br>
 <br>
 Graph of CNApp and the states of its running instances are stored by Manager in its KB and DB. 
 Failures of agents and service instances can be handled if Manager is running properly. 
@@ -210,7 +205,7 @@ SSMMP was designed to be independent of transport and network protocol stack. TC
 # A simple test CNApp for the SSMMP protocol
 
 <p align="center">
-  <img src="https://github.com/DawidBorkowskiUWS/SSMMP-a-simple-protocol-for-Service-Mesh-management/blob/main/readmeImg/ssmmp-simpleCNApp.pptx.svg" />
+  <img src="/ssmmp-simpleCNApp.pptx.svg" />
 </p>
 
 The basic functionality of the application is as follows.
@@ -222,9 +217,11 @@ Microservices cannot communicate directly with users; only via the API Gateway.
 API Gateway and microservices are stateless.  
 Requests and responses are objects of class String. 
 
-# An implementations of SSMMP tested on the above test CNApp was done by the team:  Mateusz Bielicki and Jakub ?uka (students of Computer Science at University of Siedlce) 
+# Implementations of SSMMP tested on the above test CNApp 
 
-The implementations clearly show that SSMMP should be viewed (by developers) as an integral part of CNApps. 
+The team:  Mateusz Bielicki and Jakub Luka (students of Computer Science at University of Siedlce) 
+
+So far the implementation clearly show that SSMMP should be viewed (by developers) as an integral part of CNApps. 
 
 
 
