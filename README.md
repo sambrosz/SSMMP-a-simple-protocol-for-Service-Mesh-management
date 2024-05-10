@@ -49,7 +49,6 @@ The current state of any running instance of service is stored in Manager's data
 The key element of SSMMP is the concept of communication session understood jointly as establishing a connection and then starting a protocol session on this connection.
 The process of establishing and closing such sessions is controlled by the Manager through its agents. 
 <br>
-<br>
 Current states of the running service instances are the basis for decisions made by Manager:  
 <br>
 •	execution and shutdown of service instances, 
