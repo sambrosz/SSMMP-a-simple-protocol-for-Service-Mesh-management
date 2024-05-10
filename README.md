@@ -1,9 +1,5 @@
 # SSMMP: Simple Service Mesh Management Protocol 
-
-%<p align="center">
   <img src="/ssmmp-pictures.pptx.svg" />
-%</p>
- 
 # A short introduction to SSMMP
 <br>
 A simple protocol for Service Mesh management is proposed. 
