@@ -200,7 +200,7 @@ Requests and responses are objects of class String.
 
  <a href="/ssmmpComAPIv1.1.pdf"> SSMMP/1.1 communication APIs: the code and its detailed explanation </a> to dowload 
 
-The team:  Mateusz Bielicki and Jakub Luka (students of Computer Science at University of Siedlce) 
+
 
 So far the implementation clearly show that SSMMP should be viewed (by developers) as an integral part of CNApps. 
 
